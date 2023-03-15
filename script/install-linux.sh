@@ -7,7 +7,7 @@ NC='\033[0m'
 
 echo -e "Hi! I will download and install ${BLUE}chat_desk${NC} into your system"
 
-rm "chat_desk*"
+rm chat_desk*
 
 echo -e "${CYAN}Grabbing the latest release from github${NC}"
 (curl -s https://api.github.com/repos/omegaui/chat_desk/releases/latest \
