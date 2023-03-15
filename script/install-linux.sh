@@ -20,6 +20,7 @@ sudo unzip "chat_desk*" -d /opt/chat_desk
 
 echo "Downloading App Icon and Desktop Entry"
 
+sudo wget "https://raw.githubusercontent.com/omegaui/chat_desk_linux_install_script/main/resources/app_icon.png" --output-document=/opt/chat_desk/app_icon.png
+sudo wget "https://raw.githubusercontent.com/omegaui/chat_desk_linux_install_script/main/resources/chat_desk.desktop" --output-document=/usr/share/applications/chat_desk.desktop
 
-
-
+echo "${CYAN}Integrated Install Successful!${NC}"
