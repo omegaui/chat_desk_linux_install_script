@@ -2,7 +2,7 @@
 Name=Chat Desk
 Description=A self-hosted chat application for desktop written in Flutter!
 Exec=/opt/chat_desk/chat_desk
-Icon=/opt/chat_desk/app-icon.png
+Icon=/opt/chat_desk/app_icon.png
 Terminal=false
 Type=Application
 StartupNotify=true
