@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Chat Desk
 Description=A self-hosted chat application for desktop written in Flutter!
-Exec=cd && cd chat_desk && ./chat_desk
+Exec=/usr/bin/chat_desk
 Icon=/opt/chat_desk_icon.png
 Terminal=false
 Type=Application
