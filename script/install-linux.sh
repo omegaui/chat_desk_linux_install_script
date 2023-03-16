@@ -7,6 +7,9 @@ NC='\033[0m'
 
 echo -e "Hi! I will download and install ${BLUE}chat_desk${NC} into your system"
 
+cd
+
+rm -rf chat_desk
 rm chat_desk*
 
 echo -e "${CYAN}Grabbing the latest release from github${NC}"
@@ -18,17 +21,15 @@ echo -e "${CYAN}Grabbing the latest release from github${NC}"
 
 echo -e "${CYAN}You need to be logged in to install it to ${BLUE}/opt${NC}"
 
-sudo rm -rf /opt/chat_desk
+unzip "chat_desk*" -d chat_desk
 
-sudo unzip "chat_desk*" -d /opt/chat_desk
+echo -e "${CYAN}Downloading ${BLUE}Core, App Icon and Desktop Entry${NC}"
 
-echo -e "Downloading Core, App Icon and Desktop Entry"
+sudo wget https://raw.githubusercontent.com/omegaui/chat_desk_core/main/bin/chat_desk_core.exe --output-document=chat_desk/chat_desk_core.exe
+sudo wget https://raw.githubusercontent.com/omegaui/chat_desk_core/main/bin/pubspec.yml --output-document=chat_desk/pubspec.yml
+sudo chmod 777 chat_desk/chat_desk_core.exe
 
-sudo wget https://raw.githubusercontent.com/omegaui/chat_desk_core/main/bin/chat_desk_core.exe --output-document=/opt/chat_desk/chat_desk_core.exe
-sudo wget https://raw.githubusercontent.com/omegaui/chat_desk_core/main/bin/pubspec.yml --output-document=/opt/chat_desk/pubspec.yml
-sudo chmod 777 chat_desk_core.exe
-
-sudo wget "https://raw.githubusercontent.com/omegaui/chat_desk_linux_install_script/main/resources/app_icon.png" --output-document=/opt/chat_desk/app_icon.png
+sudo wget "https://raw.githubusercontent.com/omegaui/chat_desk_linux_install_script/main/resources/app_icon.png" --output-document=chat_desk/app_icon.png
 sudo wget "https://raw.githubusercontent.com/omegaui/chat_desk_linux_install_script/main/resources/chat_desk.desktop" --output-document=/usr/share/applications/chat_desk.desktop
 
 echo -e "${CYAN}Integrated Install Successful!${NC}"
