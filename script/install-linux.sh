@@ -25,6 +25,7 @@ sudo unzip "chat_desk*" -d /opt/chat_desk
 echo -e "Downloading Core, App Icon and Desktop Entry"
 
 sudo wget https://raw.githubusercontent.com/omegaui/chat_desk_core/main/bin/chat_desk_core.exe --output-document=/opt/chat_desk/chat_desk_core.exe
+sudo wget https://raw.githubusercontent.com/omegaui/chat_desk_core/main/bin/pubspec.yml --output-document=/opt/chat_desk/pubspec.yml
 sudo chmod 777 chat_desk_core.exe
 
 sudo wget "https://raw.githubusercontent.com/omegaui/chat_desk_linux_install_script/main/resources/app_icon.png" --output-document=/opt/chat_desk/app_icon.png
