@@ -4,7 +4,7 @@ RED='\033[1;31m'
 CYAN='\033[1;36m'
 BLUE='\033[1;34m'
 NC='\033[0m'
-
+d
 echo -e "Hi! I will download and install ${BLUE}chat_desk${NC} into your system"
 
 cd
